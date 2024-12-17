@@ -338,8 +338,14 @@ public class ReceiptUI extends CarUI{
         confirmButton2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                frame.dispose();
-                new CarOptionUI();
+                if(emailField.getText().isEmpty() || passwordField.getPassword().length == 0){
+                    JOptionPane.showMessageDialog(null, "Input on both fields to confirm purchase", "Warning", JOptionPane.WARNING_MESSAGE);
+                }
+                else{
+                    frame.dispose();
+                    new CarOptionUI();
+                }
+                
             }
         });
 
