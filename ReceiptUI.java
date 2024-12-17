@@ -375,7 +375,6 @@ public class ReceiptUI extends CarUI{
         transaction1.add(panel1);
         transaction1.add(panel2);
 
-
         frame.add(switchPanel, BorderLayout.CENTER);
 
     }
